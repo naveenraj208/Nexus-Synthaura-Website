@@ -35,19 +35,19 @@ const ContactUs = () => {
 
           {/* Email */}
           <motion.a
-            href="mailto:your.email@example.com"
+            href="mailto:naveenrajbu208@gmail.com"
             className="flex items-center gap-4 text-lg font-semibold px-6 py-3 rounded-lg bg-gray-800 hover:bg-blue-500 transition-all duration-300"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
             <FaEnvelope size={24} className="text-yellow-400" />
-            your.email@example.com
+            naveenrajbu208@gmail.com
           </motion.a>
 
           {/* LinkedIn */}
           <motion.a
-            href="https://www.linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/naveen-raj-b-u-139b44214/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 text-lg font-semibold px-6 py-3 rounded-lg bg-gray-800 hover:bg-blue-500 transition-all duration-300"

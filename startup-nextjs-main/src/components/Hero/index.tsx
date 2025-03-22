@@ -1,6 +1,24 @@
+'use client'
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
+const gradientText = "Nexus Synthaura";
 
 const Hero = () => {
+  const [displayText, setDisplayText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < gradientText.length) {
+      const timeout = setTimeout(() => {
+        setDisplayText((prev) => prev + gradientText[index]);
+        setIndex(index + 1);
+      }, 150); // Adjust typing speed
+      return () => clearTimeout(timeout);
+    }
+  }, [index]);
+
   return (
     <section
       id="home"
@@ -11,8 +29,14 @@ const Hero = () => {
           <div className="w-full px-4">
             <div className="mx-auto max-w-[900px] text-center">
               <h1 className="mb-5 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight">
-                Elevate Your Business with{" "}
-                <span className="text-primary">Nexus Synthaura</span>
+                Elevate Your Business with
+                <motion.span
+                  className="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                >
+                  {" "}{displayText}
+                </motion.span>
               </h1>
               <p className="mb-8 text-lg text-gray-700 dark:text-gray-300 sm:text-xl md:text-2xl">
                 We provide cutting-edge digital solutions tailored to your needs. 
