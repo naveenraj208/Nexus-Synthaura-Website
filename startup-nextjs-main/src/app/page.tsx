@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
 import Whychooseus from "@/components/Whychooseus";
 import { Metadata } from "next";
+import Oppurtunities from "@/components/Oppurtunities";
 
 export const metadata: Metadata = {
   title: "Nexus Synthaura Technologies",
@@ -24,6 +25,7 @@ export default function Home() {
       <AboutSectionOne />
       <AboutSectionTwo />
       <Testimonials />
+      <Oppurtunities/>
       
     </>
   );
