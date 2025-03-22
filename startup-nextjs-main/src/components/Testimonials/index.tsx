@@ -9,17 +9,17 @@ const founders = [
     title: "Director | AI Researcher & Developer",
     description:
       "An innovative AI researcher and developer, pioneering next-gen technology solutions with a passion for efficiency and modularity.",
-    image: "/images/founders/naveen.png",
+    image: "/images/founders/naveen photo.png",
     linkedin: "https://www.linkedin.com/in/b-u-naveen-raj",
     instagram: "https://www.instagram.com/naveenraj",
     whatsapp: "https://wa.me/8095981108",
   },
   {
     name: "Karthik Vijaykumar",
-    title: "Director | Technology Strategist",
+    title: "Director | Architecture and management Strategist",
     description:
       "A visionary tech leader focused on creating sustainable and scalable technology solutions for the future.",
-    image: "/images/founders/karthik.png",
+    image: "/images/founders/karthi.jpeg",
     linkedin: "https://www.linkedin.com/in/karthik-vijaykumar",
     instagram: "https://www.instagram.com/karthikv",
     whatsapp: "https://wa.me/XXXXXXXXXX",
