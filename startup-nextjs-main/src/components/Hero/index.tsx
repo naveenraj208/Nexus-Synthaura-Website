@@ -1,4 +1,3 @@
-
 'use client'
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -32,7 +31,7 @@ const Hero = () => {
               <h1 className="mb-5 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight">
                 Elevate Your Business with{" "}
                 <motion.span
-                  className="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent inline-block whitespace-nowrap"
+                  className="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent inline-block min-w-[270px] text-left"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                 >
