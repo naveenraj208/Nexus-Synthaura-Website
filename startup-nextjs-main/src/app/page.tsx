@@ -5,7 +5,7 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+import Whychooseus from "@/components/Whychooseus";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,8 +19,8 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      <Video />
       <Brands />
+      <Whychooseus />
       <AboutSectionOne />
       <AboutSectionTwo />
       <Testimonials />

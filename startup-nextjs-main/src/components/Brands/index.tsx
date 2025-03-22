@@ -1,41 +1,52 @@
-import { Brand } from "@/types/brand";
-import Image from "next/image";
-import brandsData from "./brandsData";
+"use client";
 
-const Brands = () => {
+import { motion } from "framer-motion";
+
+const NexusSynthaura = () => {
   return (
-    <section className="pt-16">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center rounded-sm bg-gray-light px-8 py-8 dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px] xl:p-[50px] 2xl:px-[70px] 2xl:py-[60px]">
-              {brandsData.map((brand) => (
-                <SingleBrand key={brand.id} brand={brand} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+    <section className="relative flex items-center justify-center min-h-[60vh] bg-gray-900 text-white overflow-hidden">
+      {/* Glowing Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/20 to-pink-500/10 blur-[100px] opacity-40" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="relative z-10 text-center"
+      >
+        {/* Animated Title */}
+        <motion.h1
+          className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
+          NEXUS SYNTHAURA
+        </motion.h1>
+
+        <motion.h2
+          className="mt-2 text-lg md:text-2xl font-semibold text-gray-300"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 0.5 }}
+        >
+          TECHNOLOGIES
+        </motion.h2>
+
+        {/* Glowing Border Box */}
+        <motion.div
+          className="mt-8 px-8 py-4 border border-blue-500/50 rounded-lg shadow-lg bg-gray-800/40 backdrop-blur-lg"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.8 }}
+        >
+          <p className="text-gray-200">
+            Innovating the Future with Advanced Tech Solutions 🚀
+          </p>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
 
-export default Brands;
-
-const SingleBrand = ({ brand }: { brand: Brand }) => {
-  const { href, image, imageLight, name } = brand;
-
-  return (
-    <div className="flex w-1/2 items-center justify-center px-3 py-[15px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
-      <a
-        href={href}
-        target="_blank"
-        rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
-      >
-        <Image src={imageLight} alt={name} fill className="hidden dark:block" />
-        <Image src={image} alt={name} fill className="block dark:hidden" />
-      </a>
-    </div>
-  );
-};
+export default NexusSynthaura;

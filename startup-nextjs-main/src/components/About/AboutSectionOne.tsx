@@ -16,47 +16,44 @@ const ListItem = ({ text }: { text: string }) => (
   </p>
 );
 
-const AboutSectionOne = () => {
+const StartupProcessSection = () => {
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="process" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Hassle-Free Startup Solutions – We Handle Everything!"
+                paragraph="We streamline your journey from idea to execution. Focus on your vision, and we’ll take care of the rest."
                 mb="44px"
               />
-
               <div className="mb-12 max-w-[570px] lg:mb-0" data-wow-delay=".15s">
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <ListItem text="Premium quality" />
-                    <ListItem text="Tailwind CSS" />
-                    <ListItem text="Use for lifetime" />
+                    <ListItem text="Contact us & get a proposal" />
+                    <ListItem text="Sign up & onboard seamlessly" />
+                    <ListItem text="Requirement meeting – your vision matters" />
                   </div>
-
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <ListItem text="Next.js" />
-                    <ListItem text="Rich documentation" />
-                    <ListItem text="Developer friendly" />
+                    <ListItem text="Leave everything to us" />
+                    <ListItem text="Ongoing support & collaboration" />
+                    <ListItem text="We deliver – hassle-free & on time!" />
                   </div>
                 </div>
               </div>
             </div>
-
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
                 <Image
                   src="/images/about/about-image.svg"
-                  alt="about-image"
+                  alt="startup-process-image"
                   fill
                   className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
                 <Image
                   src="/images/about/about-image-dark.svg"
-                  alt="about-image"
+                  alt="startup-process-image-dark"
                   fill
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                 />
@@ -69,4 +66,4 @@ const AboutSectionOne = () => {
   );
 };
 
-export default AboutSectionOne;
+export default StartupProcessSection;

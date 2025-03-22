@@ -20,14 +20,14 @@ const AboutSectionTwo = () => {
           <div className="w-full px-4 lg:w-1/2">
             <div className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0">
               <Image
-                src="/images/about/services.svg"
+                src="/images/about/about-image-2.svg"
                 alt="Services"
                 width={500}
                 height={500}
                 className="drop-shadow-lg dark:hidden"
               />
               <Image
-                src="/images/about/services-dark.svg"
+                src="/images/about/about-image-2-dark.svg"
                 alt="Services Dark Mode"
                 width={500}
                 height={500}

@@ -1,50 +1,82 @@
-import { Testimonial } from "@/types/testimonial";
-import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "./SingleTestimonial";
+"use client";
 
-const testimonialData: Testimonial[] = [
+import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
+
+const founders = [
   {
-    id: 1,
     name: "B.U. Naveen Raj",
-    designation: "AI Researcher & Developer",
-    content:
-      "This project showcases my expertise in AI and software development, delivering efficient and innovative solutions to complex problems.",
-    image: "/images/testimonials/auth-01.png",
-    star: 5,
+    title: "Director | AI Researcher & Developer",
+    description:
+      "An innovative AI researcher and developer, pioneering next-gen technology solutions with a passion for efficiency and modularity.",
+    image: "/images/founders/naveen.png",
+    linkedin: "https://www.linkedin.com/in/b-u-naveen-raj",
+    instagram: "https://www.instagram.com/naveenraj",
+    whatsapp: "https://wa.me/8095981108",
   },
   {
-    id: 2,
-    name: "Saiwin Lights",
-    designation: "Technology Innovator",
-    content:
-      "An incredible journey of building futuristic tech solutions with a focus on modularity, efficiency, and real-world applications.",
-    image: "/images/testimonials/auth-02.png",
-    star: 5,
-  },
-  {
-    id: 3,
-    name: "AI & ML Community",
-    designation: "Experts & Developers",
-    content:
-      "A cutting-edge AI-powered project that blends innovation with practicality, setting new standards in machine learning applications.",
-    image: "/images/testimonials/auth-03.png",
-    star: 5,
+    name: "Karthik Vijaykumar",
+    title: "Director | Technology Strategist",
+    description:
+      "A visionary tech leader focused on creating sustainable and scalable technology solutions for the future.",
+    image: "/images/founders/karthik.png",
+    linkedin: "https://www.linkedin.com/in/karthik-vijaykumar",
+    instagram: "https://www.instagram.com/karthikv",
+    whatsapp: "https://wa.me/XXXXXXXXXX",
   },
 ];
 
-const Testimonials = () => {
+const FoundersSection = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="py-16 md:py-20 lg:py-28 bg-gray-900 text-white">
       <div className="container">
-        <SectionTitle
-          title="What People Say"
-          paragraph="Hear from experts and innovators who have experienced the impact of our work in AI, technology, and software development."
-          center
-        />
+        {/* Title */}
+        <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-500">
+          Meet Our Founders
+        </h2>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+        {/* Founder Boxes */}
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+          {founders.map((founder, index) => (
+            <div
+              key={index}
+              className="rounded-lg bg-gray-800 p-8 shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              {/* Image */}
+              <div className="flex justify-center">
+                <Image
+                  src={founder.image}
+                  alt={founder.name}
+                  width={150}
+                  height={150}
+                  className="rounded-full border-4 border-blue-500"
+                />
+              </div>
+
+              {/* Name & Title */}
+              <h3 className="mt-4 text-center text-2xl font-semibold text-white">
+                {founder.name}
+              </h3>
+              <p className="text-center text-lg font-medium text-blue-400">
+                {founder.title}
+              </p>
+
+              {/* Description */}
+              <p className="mt-4 text-center text-gray-300">{founder.description}</p>
+
+              {/* Social Icons */}
+              <div className="mt-6 flex justify-center space-x-6">
+                <a href={founder.linkedin} target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin size={28} className="text-blue-500 hover:text-blue-400 transition-all" />
+                </a>
+                <a href={founder.instagram} target="_blank" rel="noopener noreferrer">
+                  <FaInstagram size={28} className="text-pink-500 hover:text-pink-400 transition-all" />
+                </a>
+                <a href={founder.whatsapp} target="_blank" rel="noopener noreferrer">
+                  <FaWhatsapp size={28} className="text-green-500 hover:text-green-400 transition-all" />
+                </a>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -52,4 +84,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default FoundersSection;
