@@ -28,7 +28,6 @@ export default function Home() {
       <AboutSectionOne />
       <Divider/>
       <AboutSectionTwo />
-      <Divider/>
       <Testimonials />
       <Oppurtunities/>
      
