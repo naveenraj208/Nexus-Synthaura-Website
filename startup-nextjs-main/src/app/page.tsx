@@ -31,7 +31,7 @@ export default function Home() {
       <Divider/>
       <Testimonials />
       <Oppurtunities/>
-      <Divider/>
+     
       
     </>
   );
