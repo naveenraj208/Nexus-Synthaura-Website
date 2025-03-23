@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import Whychooseus from "@/components/Whychooseus";
 import { Metadata } from "next";
 import Oppurtunities from "@/components/Oppurtunities";
+import Divider from "@/components/Common/Divider"; 
 
 export const metadata: Metadata = {
   title: "Nexus Synthaura Technologies",
@@ -20,12 +21,17 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
+      <Divider/>
       <Brands />
+      <Divider/>
       <Whychooseus />
       <AboutSectionOne />
+      <Divider/>
       <AboutSectionTwo />
+      <Divider/>
       <Testimonials />
       <Oppurtunities/>
+      <Divider/>
       
     </>
   );
