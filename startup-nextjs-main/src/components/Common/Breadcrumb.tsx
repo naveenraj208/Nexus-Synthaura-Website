@@ -8,7 +8,7 @@ const Breadcrumb = ({
   description: string;
 }) => {
   return (
-    <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px] bg-gradient-to-r from-indigo-600 to-blue-500 text-white">
+    <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px] bg-gradient-to-r from-indigo-900 to-blue-700 text-white">
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           {/* Left Content: Page Title & Description */}
