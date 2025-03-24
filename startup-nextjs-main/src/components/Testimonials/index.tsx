@@ -6,17 +6,17 @@ import Image from "next/image";
 const founders = [
   {
     name: "Umashankari Baskar",
-    title: "Director | Technolagy and Innovation Strategist",
+    title: "Director | Technology and Innovation Strategist",
     description:
       "An innovative leader, pioneering next-gen technology solutions with a passion for efficiency and modularity.",
-    image: "/images/founders/naveen photo.png",
+    image: "/images/founders/anu.jpeg",
     linkedin: "https://www.linkedin.com/in/b-u-naveen-raj",
     instagram: "https://www.instagram.com/naveenraj",
     whatsapp: "https://wa.me/8095981108",
   },
   {
     name: "Karthik Vijaykumar",
-    title: "Director | Architecture and management Strategist",
+    title: "Director | Architecture and Management Strategist",
     description:
       "A visionary tech leader focused on creating sustainable and scalable technology solutions for the future.",
     image: "/images/founders/karthi.jpeg",
@@ -44,13 +44,15 @@ const FoundersSection = () => {
             >
               {/* Image */}
               <div className="flex justify-center">
-                <Image
-                  src={founder.image}
-                  alt={founder.name}
-                  width={150}
-                  height={150}
-                  className="rounded-full border-4 border-blue-500"
-                />
+                <div className="w-[150px] h-[150px] rounded-full overflow-hidden border-4 border-blue-500">
+                  <Image
+                    src={founder.image}
+                    alt={founder.name}
+                    width={150}
+                    height={150}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
 
               {/* Name & Title */}
