@@ -5,10 +5,10 @@ import Image from "next/image";
 
 const founders = [
   {
-    name: "B.U. Naveen Raj",
-    title: "Director | AI Researcher & Developer",
+    name: "Umashankari Baskar",
+    title: "Director | Technolagy and Innovation Strategist",
     description:
-      "An innovative AI researcher and developer, pioneering next-gen technology solutions with a passion for efficiency and modularity.",
+      "An innovative leader, pioneering next-gen technology solutions with a passion for efficiency and modularity.",
     image: "/images/founders/naveen photo.png",
     linkedin: "https://www.linkedin.com/in/b-u-naveen-raj",
     instagram: "https://www.instagram.com/naveenraj",
